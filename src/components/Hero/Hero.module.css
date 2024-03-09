@@ -1,0 +1,28 @@
+.hero {
+    text-align: center;
+    background: var(--main-title);
+    padding: 118px 0;
+}
+
+.overlay {
+    max-width: 1600px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../../../public/Images/hero/Header-img-desk@2x.jpg);
+}
+
+.main-title {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: calc(60 / 44);
+    color: var(--color-btn);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    max-width: 360px;
+    margin: 0 auto;
+}
