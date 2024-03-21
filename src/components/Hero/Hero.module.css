@@ -1,12 +1,12 @@
 .hero {
     text-align: center;
     background: var(--main-title);
-    padding: 118px 0;
+    padding: 200px 0;
 }
 
 .overlay {
     max-width: 1600px;
-    height: 400px;
+    height: 600px;
     margin-left: auto;
     margin-right: auto;
     background-position: center;
@@ -16,13 +16,14 @@
             url(../../../public/Images/hero/Header-img-desk@2x.jpg);
 }
 
-.main-title {
-    font-size: 26px;
+.mainTitle {
+    font-size: 44px;
+    max-width: 696px;
     font-weight: 900;
     line-height: calc(60 / 44);
     color: var(--color-btn);
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    max-width: 360px;
+    text-align: center;
     margin: 0 auto;
 }

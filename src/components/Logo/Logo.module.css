@@ -1,0 +1,17 @@
+/* logo header*/
+.logoLink {
+    font-family: var(--logo-font);
+    text-decoration: none;
+    font-weight: 700;
+    line-height: calc(31 / 26);
+    color: var(--bg-btn);
+    font-size: 26px;
+}
+
+.logoHeader {
+    color: var(--hero-bg);
+}
+
+.logoFooter {
+    color: var(--color-btn);
+}

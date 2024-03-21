@@ -1,15 +1,239 @@
-@import-normalize; /* bring in normalize.css styles */
+@import '../node_modules/modern-normalize/modern-normalize.css'; /* bring in normalize.css styles */
+@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap);
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--main-font);
+  font-size: 14px;
+  letter-spacing: 0.03em;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+/* reset start*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+.list {
+  list-style: none;
+  /* margin: 0; */
+  padding-left: 0;
+}
+
+.link {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 1200px;
+}
+
+:root {
+  --main-font: Roboto, sans-serif;
+  --logo-font: Raleway, sans-serif;
+  /* color */
+  --main-title: #2f303a;
+  --hero-bg: #000000;
+  --filter-btn: #212121;
+  --address: #757575;
+  --bg-btn: #2196f3;
+  --color-btn: #ffffff;
+  --filter-gd-btn: #f5f4fa;
+  /* Others */
+  --trns-hover: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.btn {
+  border-radius: 4px;
+  border: none;
+  font-family: var(--main-font);
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+  list-style: none;
+  cursor: pointer;
+}
+
+.heroButton {
+  background-color: var(--bg-btn);
+  line-height: 1.88;
+  color: var(--color-btn);
+  font-weight: 700;
+  padding: 10px 24px;
+  margin-top: 30px;
+  letter-spacing: 0.06em;
+  padding: 10px 32px;
+  transition: background-color var(--trns-hover);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }    
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+
+  @media (max-width: 767px) {
+    justify-content: flex-start;
+  }
+}
+
+.filter__button {
+  background-color: var(--filter-gd-btn);
+  line-height: 1.62;
+  color: var(--filter-btn);
+  font-weight: 500;
+  margin-left: 8px;
+  padding: 6px 22px;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+
+  transition: color var(--trns-hover), background-color var(--trns-hover),
+    box-shadow var(--trns-hover);
+
+  &:hover,
+  &:focus {
+    color: var(--color-btn);
+    background-color: var(--bg-btn);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.sign-button {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  line-height: 1.88;
+  color: var(--color-btn);
+  font-weight: 700;
+  padding: 10px 28px;
+  width: 200px;
+  height: 50px;
+  letter-spacing: 0.06em;
+  background-color: var(--bg-btn);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color var(--trns-hover);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+
+  &__icon {
+    fill: var(--color-btn);
+    margin-left: 10px;
+  }
+
+  @media (min-width: 1200px) {
+    margin: 0;
+  }
+}
+
+.submit__button {
+  display: block;
+  line-height: 1.88;
+  color: var(--color-btn);
+  font-weight: 700;
+  padding: 10px 52px;
+
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 0.06em;
+  background-color: var(--bg-btn);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  transition: background-color var(--trns-hover);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}
+
+.close__btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+  width: 30px;
+  height: 30px;
+
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  transition: fill var(--trns-hover);
+
+  &:hover .close__icon {
+    fill: var(--bg-btn);
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    padding: 200px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .overlay {
+    height: 600px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-title {
+    font-size: 44px;
+    max-width: 696px;
+  }
 }
